@@ -1,1 +1,45 @@
-/* 添加 CSS */
+body {
+  font-family: Arial, Helvetica, San-serif;
+}
+
+.card {
+  width: 330px;
+  padding: 0px 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px #e1e1e1;
+}
+
+h3 {
+  width: 300px;
+  margin: 25px 0px;
+  color: #444;
+}
+
+img {
+  margin: 0px 0px;
+  border-radius: 5px;
+}
+
+.description {
+  width: 278px;
+  margin: 15px 0px;
+  padding: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  font-size: 13px;
+  color: #888;
+}
+
+.common-sense {
+  font-style: italic;
+}
+
+.list {
+  padding-left: 0px;
+  list-style: none;
+}
+
+span {
+  font-weight: bold;
+}/* 添加 CSS */
