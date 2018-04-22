@@ -1,30 +1,38 @@
 html {
     box-sizing: border-box
 }
+
 *,
 *::after,
 *::before {
     box-sizing: inherit
 }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
+
 p {
   margin: 0 0 1em;
 }
+
 .container {
   width: 1920px;
   margin: 0 auto;
 }
-.picture, .resume {
+
+.picture,
+.resume {
   position: fixed;
   width: 960px;
   padding: 3.125rem;
 }
+
 .picture {
   top: 0;
   left: 0;
 }
+
 .intro {
   width: 75%;
   margin: 55% auto 0;
@@ -35,24 +43,27 @@ p {
   color: #fff;
   text-align: center;
 }
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/profile.jpg");
-  background-size: cover;
-  background-position: center top;
-  filter: brightness(90%);
-}
+
 .intro em {
   color: #3ee6bf;
   font-style: normal;
   position: relative;
   font-weight: 700;
 }
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/profile.jpg);
+  background-size: cover;
+  background-position: center top;
+  filter: brightness(90%);
+}
+
 .resume {
   top: 0;
   right: 0;
@@ -64,28 +75,85 @@ p {
   line-height: 1.818;
   overflow-y: scroll;
 }
+
 .part {
   width: 100%;
   margin-top: 3em;
   clear: both;
   overflow: hidden;
 }
+
 .part:first-child {
   margin-top: 0;
 }
+
 .sidebar, .main {
   float: left;
 }
+
 .sidebar {
   width: 10%;
 }
+
 .main {
   width: 90%;
-  padding-right: 25%;
+  padding: 0 15% 0 10%;
 }
+
 .tag {
   text-transform: uppercase;
   font-style: italic;
   font-weight: 600;
-  color: rgb(43, 93, 240);
+  color: #2b5df0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+}
+
+.picture,
+.resume {
+  width: 50%;
+  flex-grow: 1;
+}
+
+@media (min-width: 850px) and (max-width: 1100px) {
+  .sidebar,
+  .main {
+    width: 100%;
+    padding: 0 5%;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 849px) {
+  .sidebar,
+  .main {
+    width: 100%;
+  }
+
+  .main {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .picture {
+    width: 0;
+    flex-grow: 0;
+  }
+
+  .resume {
+    width: 100%;
+  }
+
+  .sidebar,
+  .main {
+    width: 100%;
+  }
+
+  .main {
+    padding: 0;
+  }
 }
